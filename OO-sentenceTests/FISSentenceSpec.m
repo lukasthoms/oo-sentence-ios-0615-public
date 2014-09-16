@@ -59,14 +59,18 @@ describe(@"FISSentence", ^{
 
     describe(@"containsWord", ^{
         
-        it(@"should take a string as an argument and return a BOOL", ^{
+        it(@"should take a string as an argument and return true if the word is contained in the sentence", ^{
             expect([sentence containsWord:@"Zach"]).to.beTruthy();
         });
         
-        it(@"should take a string as an argument and return a BOOL", ^{
-            expect([sentence containsWord:@"Joe"]).to.beFalsy();
+        it(@"should take a string as an argument and return false if the word is contained in the sentence but in a different case", ^{
+            expect([sentence containsWord:@"zach"]).to.beFalsy();
         });
         
+        it(@"should take a string as an argument and return false if the word is not contained in the sentence", ^{
+            expect([sentence containsWord:@"Joe"]).to.beFalsy();
+        });
+
     });
 
     describe(@"stringFormat", ^{
