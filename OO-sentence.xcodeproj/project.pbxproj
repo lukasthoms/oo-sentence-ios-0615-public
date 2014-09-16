@@ -19,7 +19,6 @@
 		D8EC4E4019C64AE6002E0FA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8EC4E2519C64AE6002E0FA4 /* Foundation.framework */; };
 		D8EC4E4119C64AE6002E0FA4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8EC4E2919C64AE6002E0FA4 /* UIKit.framework */; };
 		D8EC4E4919C64AE6002E0FA4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8EC4E4719C64AE6002E0FA4 /* InfoPlist.strings */; };
-		D8EC4E4B19C64AE6002E0FA4 /* OO_sentenceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EC4E4A19C64AE6002E0FA4 /* OO_sentenceTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +49,6 @@
 		D8EC4E3E19C64AE6002E0FA4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D8EC4E4619C64AE6002E0FA4 /* OO-sentenceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OO-sentenceTests-Info.plist"; sourceTree = "<group>"; };
 		D8EC4E4819C64AE6002E0FA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D8EC4E4A19C64AE6002E0FA4 /* OO_sentenceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OO_sentenceTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +133,6 @@
 		D8EC4E4419C64AE6002E0FA4 /* OO-sentenceTests */ = {
 			isa = PBXGroup;
 			children = (
-				D8EC4E4A19C64AE6002E0FA4 /* OO_sentenceTests.m */,
 				D8EC4E4519C64AE6002E0FA4 /* Supporting Files */,
 			);
 			path = "OO-sentenceTests";
@@ -290,7 +287,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8EC4E4B19C64AE6002E0FA4 /* OO_sentenceTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
