@@ -24,9 +24,8 @@ describe(@"FISSentence", ^{
     __block NSArray *testArrayWithoutPunctuation;
     __block NSArray *testArrayWithoutCapitalizationOrPunctuation;
 
-    __block NSArray *sameSentenceArray;
     __block NSArray *differentSentenceArray;
-    
+
     beforeAll(^{
 
         sentence = [[FISSentence alloc] init];
@@ -128,6 +127,11 @@ describe(@"FISSentence", ^{
         
         it (@"should return true if the words array form a proper sentence with capitalization and ending with an exclamation point", ^{
             [newSentence setWords:[testArrayEndingWithAnExclamationPoint mutableCopy]];
+            expect([newSentence isProperSentence]).to.beTruthy();
+        });
+
+        it (@"should return true if the words array form a proper sentence with capitalization and ending with a period", ^{
+            [newSentence setWords:[testArrayEndingWithAPeriod mutableCopy]];
             expect([newSentence isProperSentence]).to.beTruthy();
         });
 
