@@ -66,6 +66,10 @@ describe(@"FISSentence", ^{
         it(@"should take a string as an argument and return false if the word is contained in the sentence but in a different case", ^{
             expect([sentence containsWord:@"zach"]).to.beFalsy();
         });
+       
+        it(@"should take a string as an argument and return false if seeking a partial word", ^{
+            expect([sentence containsWord:@"Za"]).to.beFalsy();
+        });
         
         it(@"should take a string as an argument and return false if the word is not contained in the sentence", ^{
             expect([sentence containsWord:@"Joe"]).to.beFalsy();
