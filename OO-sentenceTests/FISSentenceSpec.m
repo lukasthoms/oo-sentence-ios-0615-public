@@ -82,12 +82,17 @@ describe(@"FISSentence", ^{
     });
 
     describe(@"isProperSentence", ^{
+        
+        FISSentence *newSentence = [[FISSentence alloc] init];
+
         it(@"should return a BOOL letting us know whether the words array form a proper sentence", ^{
             expect([sentence isProperSentence]).to.beTruthy();
             
-            [sentence setWords:[sameSentenceArray mutableCopy]];
-            expect([sentence isProperSentence]).to.beFalsy();
+            [newSentence setWords:[sameSentenceArray mutableCopy]];
+            expect([newSentence isProperSentence]).to.beFalsy();
         });
+        
+        
     });
     
     //it occurs to me - we might have let something slip by yesterday - do we want the argument to also be a sentence instead of an array?
