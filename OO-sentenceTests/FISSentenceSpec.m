@@ -17,6 +17,11 @@ describe(@"FISSentence", ^{
     
     __block FISSentence *sentence;
     __block NSArray *testArray;
+    __block NSArray *testArrayEndingWithAQuestionMark;
+    __block NSArray *testArrayEndingWithAPeriod;
+    __block NSArray *testArrayEndingWithACloseParens;
+    __block NSArray *testArrayEndingWithADoubleQuotationMark;
+
     __block NSArray *sameSentenceArray;
     __block NSArray *differentSentenceArray;
     
@@ -24,7 +29,11 @@ describe(@"FISSentence", ^{
 
         sentence = [[FISSentence alloc] init];
         testArray = @[@"Zach",@"is",@"a",@"teacher!"];
-        sameSentenceArray = @[@"zach",@"is",@"a",@"teacher"];
+        testArrayEndingWithAQuestionMark = @[@"Zach",@"is",@"a",@"teacher?"];
+        testArrayEndingWithAPeriod = @[@"Zach",@"is",@"a",@"teacher."];
+        testArrayEndingWithACloseParens = @[@"(Zach",@"is",@"a",@"teacher!)"];
+        testArrayEndingWithADoubleQuotationMark = @[@"Joe",@"exclaimed",@"\"Zach",@"is",@"a",@"teacher!\""];
+
         differentSentenceArray = @[@"joe",@"is",@"a",@"teacher"];
         
         [sentence setWords:[testArray mutableCopy]];
@@ -97,6 +106,25 @@ describe(@"FISSentence", ^{
         });
         
         
+        it (@"should return true if the words array form a proper sentence with capitalization and ending with a question mark", ^{
+            [newSentence setWords:[testArrayEndingWithAQuestionMark mutableCopy]];
+            expect([newSentence isProperSentence]).to.beTruthy();
+        });
+        
+        it (@"should return true if the words array form a proper sentence with capitalization and ending with an exclamation point", ^{
+            [newSentence setWords:[testArray mutableCopy]];
+            expect([newSentence isProperSentence]).to.beTruthy();
+        });
+        
+        it (@"should return true if the words array form a proper sentence with capitalization and ending with a closing parenthesis", ^{
+            [newSentence setWords:[testArrayEndingWithACloseParens mutableCopy]];
+            expect([newSentence isProperSentence]).to.beTruthy();
+        });
+        
+        it (@"should return true if the words array form a proper sentence with capitalization and ending with a double quotation", ^{
+            [newSentence setWords:[testArrayEndingWithADoubleQuotationMark mutableCopy]];
+            expect([newSentence isProperSentence]).to.beTruthy();
+        });
     });
     
     //it occurs to me - we might have let something slip by yesterday - do we want the argument to also be a sentence instead of an array?
