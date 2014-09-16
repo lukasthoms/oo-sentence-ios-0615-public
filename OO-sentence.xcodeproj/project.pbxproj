@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31B69E6919C76CC800D0A5AB /* FISSentence.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B69E6819C76CC800D0A5AB /* FISSentence.m */; };
+		31B69E6B19C7976E00D0A5AB /* FISSentenceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B69E6A19C7976E00D0A5AB /* FISSentenceSpec.m */; };
 		D1A895799D714D5DA2E9B307 /* libPods-OO-sentenceTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D412C81B69564DCD9D373A1D /* libPods-OO-sentenceTests.a */; };
 		D8EC4E2619C64AE6002E0FA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8EC4E2519C64AE6002E0FA4 /* Foundation.framework */; };
 		D8EC4E2819C64AE6002E0FA4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8EC4E2719C64AE6002E0FA4 /* CoreGraphics.framework */; };
@@ -32,6 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		31B69E6719C76CC800D0A5AB /* FISSentence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISSentence.h; sourceTree = "<group>"; };
+		31B69E6819C76CC800D0A5AB /* FISSentence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISSentence.m; sourceTree = "<group>"; };
+		31B69E6A19C7976E00D0A5AB /* FISSentenceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISSentenceSpec.m; sourceTree = "<group>"; };
 		36A6E60D164E4905922947A0 /* Pods-OO-sentenceTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OO-sentenceTests.xcconfig"; path = "Pods/Pods-OO-sentenceTests.xcconfig"; sourceTree = "<group>"; };
 		D412C81B69564DCD9D373A1D /* libPods-OO-sentenceTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OO-sentenceTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8EC4E2219C64AE6002E0FA4 /* OO-sentence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OO-sentence.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +138,7 @@
 		D8EC4E4419C64AE6002E0FA4 /* OO-sentenceTests */ = {
 			isa = PBXGroup;
 			children = (
+				31B69E6A19C7976E00D0A5AB /* FISSentenceSpec.m */,
 				D8EC4E4519C64AE6002E0FA4 /* Supporting Files */,
 			);
 			path = "OO-sentenceTests";
@@ -287,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31B69E6B19C7976E00D0A5AB /* FISSentenceSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
