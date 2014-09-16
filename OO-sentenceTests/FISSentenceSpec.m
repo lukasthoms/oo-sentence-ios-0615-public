@@ -31,10 +31,6 @@ describe(@"FISSentence", ^{
 
     });
     
-    beforeEach(^{
-
-    });
-    
     describe(@"words accessor", ^{
         
         it(@"should get the words instance variable", ^{
@@ -104,13 +100,6 @@ describe(@"FISSentence", ^{
         });
     });
     
-    afterEach(^{
-
-    });
-    
-    afterAll(^{
-
-    });
 });
 
 SpecEnd
