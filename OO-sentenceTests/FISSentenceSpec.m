@@ -83,8 +83,8 @@ describe(@"FISSentence", ^{
     });
     
     //it occurs to me - we might have let something slip by yesterday - do we want the argument to also be a sentence instead of an array?
-    
-    it(@"isEqualToSentence", ^{
+
+    describe(@"isEqualToSentence", ^{
         it(@"should return a BOOL letting us know whether two sentences are the same, excluding case and punctuation", ^{
             expect([sentence  isEqualToSentence:sameSentenceArray]).to.beTruthy();
             expect([sentence isEqualToSentence:differentSentenceArray]).to.beFalsy();
