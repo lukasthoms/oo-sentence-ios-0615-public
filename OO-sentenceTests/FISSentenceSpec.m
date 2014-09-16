@@ -22,6 +22,10 @@ describe(@"FISSentence", ^{
     __block NSArray *testArrayEndingWithACloseParens;
     __block NSArray *testArrayEndingWithADoubleQuotationMark;
 
+    __block NSArray *testArrayWithoutCapitalization;
+    __block NSArray *testArrayWithoutPunctuation;
+    __block NSArray *testArrayWithoutCapitalizationOrPunctuation;
+
     __block NSArray *sameSentenceArray;
     __block NSArray *differentSentenceArray;
     
@@ -34,6 +38,9 @@ describe(@"FISSentence", ^{
         testArrayEndingWithACloseParens = @[@"(Zach",@"is",@"a",@"teacher!)"];
         testArrayEndingWithADoubleQuotationMark = @[@"Joe",@"exclaimed",@"\"Zach",@"is",@"a",@"teacher!\""];
 
+        testArrayWithoutCapitalization = @[@"zach",@"is",@"a",@"teacher!"];
+        testArrayWithoutPunctuation = @[@"Zach",@"is",@"a",@"teacher"];
+        testArrayWithoutCapitalizationOrPunctuation = @[@"zach",@"is",@"a",@"teacher"];
         differentSentenceArray = @[@"joe",@"is",@"a",@"teacher"];
         
         [sentence setWords:[testArray mutableCopy]];
@@ -98,13 +105,30 @@ describe(@"FISSentence", ^{
         
         FISSentence *newSentence = [[FISSentence alloc] init];
 
-        it(@"should return a BOOL letting us know whether the words array form a proper sentence", ^{
+        it(@"should return true if the words array form a proper sentence with capitaliation and punctuation", ^{
             expect([sentence isProperSentence]).to.beTruthy();
-            
-            [newSentence setWords:[sameSentenceArray mutableCopy]];
+        });
+        
+        it(@"should return false if the words array form an improper sentence with capitalization but no punctuation", ^{
+            [newSentence setWords:[testArrayWithoutPunctuation mutableCopy]];
             expect([newSentence isProperSentence]).to.beFalsy();
         });
         
+        it(@"should return false if the words array form an improper sentence without capitalization but with punctuation", ^{
+            [newSentence setWords:[testArrayWithoutCapitalization mutableCopy]];
+            expect([newSentence isProperSentence]).to.beFalsy();
+        });
+        
+        it(@"should return false if the words array form an improper sentence without capitalization and no punctuation", ^{
+            [newSentence setWords:[testArrayWithoutCapitalizationOrPunctuation mutableCopy]];
+            expect([newSentence isProperSentence]).to.beFalsy();
+        });
+        
+        it (@"should return true if the words array form a proper sentence with capitalization and ending with a period", ^{
+            [newSentence setWords:[testArrayWithoutCapitalizationOrPunctuation mutableCopy]];
+            expect([newSentence isProperSentence]).to.beTruthy();
+
+        });
         
         it (@"should return true if the words array form a proper sentence with capitalization and ending with a question mark", ^{
             [newSentence setWords:[testArrayEndingWithAQuestionMark mutableCopy]];
