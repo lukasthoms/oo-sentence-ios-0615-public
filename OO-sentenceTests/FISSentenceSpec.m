@@ -72,16 +72,8 @@ describe(@"FISSentence", ^{
         });
         
     });
-    
-    describe(@"stringFormat", ^{
-        
-        it(@"should return a formatted sentence from the words instance variable", ^{
-            expect([sentence stringFormat]).to.equal(@"Zach is a teacher!");
-        });
-        
-    });
-    
-    it(@"isProperSentence", ^{
+
+    describe(@"isProperSentence", ^{
         it(@"should return a BOOL letting us know whether the words array form a proper sentence", ^{
             expect([sentence isProperSentence]).to.beTruthy();
             
