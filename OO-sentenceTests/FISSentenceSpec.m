@@ -43,7 +43,15 @@ describe(@"FISSentence", ^{
         
     });
     
-    // should we do a test for the setter too? Or will that method be included in the lab?
+    describe(@"words setter", ^{
+        
+        it(@"should set the words instance variable", ^{
+            FISSentence *newSentence = [[FISSentence alloc] init];
+            [newSentence setWords:[@[@"Zach",@"is",@"an",@"instructor!"] mutableCopy]];
+            expect([newSentence words]).to.equal(@[@"Zach",@"is",@"an",@"instructor!"]);
+        });
+        
+    });
     
     describe(@"numOfWords", ^{
         
