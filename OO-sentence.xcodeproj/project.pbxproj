@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		31B69E6919C76CC800D0A5AB /* FISSentence.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B69E6819C76CC800D0A5AB /* FISSentence.m */; };
 		31B69E6B19C7976E00D0A5AB /* FISSentenceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B69E6A19C7976E00D0A5AB /* FISSentenceSpec.m */; };
 		D1A895799D714D5DA2E9B307 /* libPods-OO-sentenceTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D412C81B69564DCD9D373A1D /* libPods-OO-sentenceTests.a */; };
 		D8EC4E2619C64AE6002E0FA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8EC4E2519C64AE6002E0FA4 /* Foundation.framework */; };
@@ -34,10 +33,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		31B69E6719C76CC800D0A5AB /* FISSentence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISSentence.h; sourceTree = "<group>"; };
-		31B69E6819C76CC800D0A5AB /* FISSentence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISSentence.m; sourceTree = "<group>"; };
 		31B69E6A19C7976E00D0A5AB /* FISSentenceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISSentenceSpec.m; sourceTree = "<group>"; };
-		36A6E60D164E4905922947A0 /* Pods-OO-sentenceTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OO-sentenceTests.xcconfig"; path = "Pods/Pods-OO-sentenceTests.xcconfig"; sourceTree = "<group>"; };
+		31CBD5D7EBE2C6E3DFE1778F /* Pods-OO-sentenceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OO-sentenceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OO-sentenceTests/Pods-OO-sentenceTests.release.xcconfig"; sourceTree = "<group>"; };
+		B77B44D61F15DC74CDD1ABB7 /* Pods-OO-sentenceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OO-sentenceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OO-sentenceTests/Pods-OO-sentenceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D412C81B69564DCD9D373A1D /* libPods-OO-sentenceTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OO-sentenceTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8EC4E2219C64AE6002E0FA4 /* OO-sentence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OO-sentence.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8EC4E2519C64AE6002E0FA4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -81,6 +79,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E62953ADFEFA0CD11A8B5A1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B77B44D61F15DC74CDD1ABB7 /* Pods-OO-sentenceTests.debug.xcconfig */,
+				31CBD5D7EBE2C6E3DFE1778F /* Pods-OO-sentenceTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D8EC4E1919C64AE6002E0FA4 = {
 			isa = PBXGroup;
 			children = (
@@ -88,7 +95,7 @@
 				D8EC4E4419C64AE6002E0FA4 /* OO-sentenceTests */,
 				D8EC4E2419C64AE6002E0FA4 /* Frameworks */,
 				D8EC4E2319C64AE6002E0FA4 /* Products */,
-				36A6E60D164E4905922947A0 /* Pods-OO-sentenceTests.xcconfig */,
+				9E62953ADFEFA0CD11A8B5A1 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -274,7 +281,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-OO-sentenceTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OO-sentenceTests/Pods-OO-sentenceTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -425,7 +432,7 @@
 		};
 		D8EC4E5219C64AE6002E0FA4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36A6E60D164E4905922947A0 /* Pods-OO-sentenceTests.xcconfig */;
+			baseConfigurationReference = B77B44D61F15DC74CDD1ABB7 /* Pods-OO-sentenceTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OO-sentence.app/OO-sentence";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -448,7 +455,7 @@
 		};
 		D8EC4E5319C64AE6002E0FA4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36A6E60D164E4905922947A0 /* Pods-OO-sentenceTests.xcconfig */;
+			baseConfigurationReference = 31CBD5D7EBE2C6E3DFE1778F /* Pods-OO-sentenceTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OO-sentence.app/OO-sentence";
 				FRAMEWORK_SEARCH_PATHS = (
